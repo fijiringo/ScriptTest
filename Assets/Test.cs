@@ -20,15 +20,19 @@ public class Boss
     }
     public void Magic()
     {
-        if (mp > 5)
+        for (int i=0; i<=10 ; i++)
         {
-            this.mp -= 5;
-            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
+            if (mp >= 5)
+            {
+                this.mp -= 5;
+                Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
+            }
+            else
+            {
+                Debug.Log("MPが足りないため魔法が使えない。");
+            }
         }
-        else
-        {
-            Debug.Log("MPが足りないため魔法が使えない。");
-        }
+        
     }
 
 
@@ -56,16 +60,6 @@ public class Test : MonoBehaviour
       
         lastboss.Attack();
         lastboss.Defence(3);
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
         lastboss.Magic();
 
     }
